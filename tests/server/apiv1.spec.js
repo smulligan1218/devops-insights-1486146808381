@@ -18,10 +18,10 @@
         });
 
     	it('with valid zip code', function(done) {
-    		rqst(app).get('/api/v1/getWeather?zip=k1g4k9')
+    		rqst(app).get('/api/v1/getWeather?zip=00001')
     		.end(function(err, res) {
                     assert.equal(res.status, 200);
-                    assert.equal(res.body.city, 'Ottawa');
+                    assert.equal(res.body.city, 'ByWard Market');
                     done();
                 });
     	});
